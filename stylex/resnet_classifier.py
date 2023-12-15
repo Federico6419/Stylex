@@ -22,7 +22,8 @@ def load_resnet_classifier(model_name: str, cuda_rank: int, output_size: int = 2
     model.fc = nn.Linear(512, 2).to(device)
 
     # Load the weights from the checkpoint.
-    model.load_state_dict(torch.load(os.path.join("trained_classifiers", model_name), map_location=device))
+    #model.load_state_dict(torch.load(os.path.join("trained_classifiers", model_name), map_location=device))
+    model.load_state_dict(torch.load(model_name, map_location=device))
 
     return model
 
