@@ -32,7 +32,7 @@ from kornia.filters import filter2d
 import torchvision
 from torchvision import transforms
 #from version import __version__
-from opencc.version import __version__ 
+from .version import __version__
 from diff_augment import DiffAugment
 
 from vector_quantize_pytorch import VectorQuantize
